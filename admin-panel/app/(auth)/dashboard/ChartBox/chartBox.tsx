@@ -43,10 +43,12 @@ const dataline = [
 
 export default function MultiActionAreaCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+    <div
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3
        w-full *:w-full! 
     *:mx-auto gap-y-14 md:gap-x-6
-     ">
+     "
+    >
       <Card
         sx={{
           // maxWidth: 550,
@@ -105,20 +107,24 @@ export default function MultiActionAreaCard() {
 
           {/* Content */}
           <CardContent>
-            <Typography variant="h6" style={{fontSize: '18px'}}>
+            <Typography variant="h6" style={{ fontSize: "18px" }}>
               Website Views
             </Typography>
 
-            <Typography color="text.secondary" className="text-gray-600" style={{fontSize: '14px'}}>
+            <Typography
+              color="text.secondary"
+              className="text-gray-600"
+              style={{ fontSize: "14px" }}
+            >
               Last Campaign Performance
             </Typography>
           </CardContent>
         </CardActionArea>
 
         <CardActions className="p-4! text-gray-600">
-          <Clock size={20}/>
+          <Clock size={20} />
           <Typography variant="body2" color="text.secondary">
-             Campaign sent 2 days ago
+            Campaign sent 2 days ago
           </Typography>
         </CardActions>
       </Card>
@@ -197,20 +203,20 @@ export default function MultiActionAreaCard() {
 
           {/* Content */}
           <CardContent>
-            <Typography variant="h6" style={{fontSize: '18px'}}>
+            <Typography variant="h6" style={{ fontSize: "18px" }}>
               Daily Sales
             </Typography>
 
-            <Typography color="text.secondary" style={{fontSize: '14px'}}>
+            <Typography color="text.secondary" style={{ fontSize: "14px" }}>
               (+15%) increase in today sales.
             </Typography>
           </CardContent>
         </CardActionArea>
 
         <CardActions className="p-4! text-gray-600">
-            <Clock size={20} />
-          <Typography variant="body2" color="text.secondary" >
-              (+15%) increase in today sales.
+          <Clock size={20} />
+          <Typography variant="body2" color="text.secondary">
+            (+15%) increase in today sales.
           </Typography>
         </CardActions>
       </Card>
@@ -289,18 +295,18 @@ export default function MultiActionAreaCard() {
 
           {/* Content */}
           <CardContent>
-            <Typography variant="h6" style={{fontSize: '18px'}}>
+            <Typography variant="h6" style={{ fontSize: "18px" }}>
               completed tasks
             </Typography>
 
-            <Typography color="text.secondary" style={{fontSize: '14px'}}>
+            <Typography color="text.secondary" style={{ fontSize: "14px" }}>
               Last Campaign Performance
             </Typography>
           </CardContent>
         </CardActionArea>
 
         <CardActions className="p-4! text-gray-600">
-            <Clock size={20}/>
+          <Clock size={20} />
           <Typography variant="body2" color="text.secondary">
             just updated
           </Typography>

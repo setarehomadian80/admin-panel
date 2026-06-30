@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -6,11 +6,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
-import { Settings } from "lucide-react"
+} from "@/components/ui/sheet";
+import { Settings } from "lucide-react";
 import { useNavColor } from "@/app/context/NavColorContext";
 import SwitchSizes from "./Switch";
-
 
 const colors = [
   "#E32F6E",
@@ -21,11 +20,8 @@ const colors = [
   "#fd9912",
 ];
 
-
 export function SettingMenu() {
-
-
-  const { navColor, setNavColor } = useNavColor()
+  const { navColor, setNavColor } = useNavColor();
 
   return (
     <Sheet>
@@ -37,9 +33,7 @@ export function SettingMenu() {
       <SheetContent showCloseButton={true} className="p-8">
         <SheetHeader className="p-0">
           <SheetTitle>Material UI Configurator</SheetTitle>
-          <SheetDescription>
-            See our dashboard options.
-          </SheetDescription>
+          <SheetDescription>See our dashboard options.</SheetDescription>
         </SheetHeader>
         <div>
           {/* button theme */}
@@ -47,20 +41,21 @@ export function SettingMenu() {
             <h2 className="text-xl font-bold">Sidenav Colors</h2>
             <div className="flex gap-2">
               {colors.map((color) => (
-
                 <span
                   key={color}
                   onClick={() => setNavColor(color)}
                   style={{ backgroundColor: color }}
-                  className=" rounded-full w-5 h-5 cursor-pointer"></span>
+                  className=" rounded-full w-5 h-5 cursor-pointer"
+                ></span>
               ))}
-
             </div>
           </div>
           {/* color theme */}
-         <div><SwitchSizes /></div>
+          <div>
+            <SwitchSizes />
+          </div>
         </div>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

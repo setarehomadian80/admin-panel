@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Switch } from "@/components/ui/switch"
+import { Field, FieldGroup, FieldLabel } from "@/components/ui/field";
+import { Switch } from "@/components/ui/switch";
 
 export default function SwitchSizes() {
   return (
@@ -9,13 +9,21 @@ export default function SwitchSizes() {
       <FieldGroup className="w-full max-w-40">
         <Field orientation="horizontal">
           <FieldLabel htmlFor="switch-size-sm">Navbar Fixed</FieldLabel>
-          <Switch className="cursor-pointer" id="switch-size-sm" size="default" />
+          <Switch
+            className="cursor-pointer"
+            id="switch-size-sm"
+            size="default"
+          />
         </Field>
         <Field orientation="horizontal">
           <FieldLabel htmlFor="switch-size-default">Light / Dark</FieldLabel>
-          <Switch className="cursor-pointer"  id="switch-size-default" size="default" />
+          <Switch
+            className="cursor-pointer"
+            id="switch-size-default"
+            size="default"
+          />
         </Field>
       </FieldGroup>
     </div>
-  )
+  );
 }
