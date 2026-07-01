@@ -5,8 +5,8 @@ import ProjectsTable from './ProjectsTable/page'
 export default function page() {
   return (
     <div>
-      <div className='mt-10'><AuthorsTable /></div>
-      <div className='mt-10'><ProjectsTable /></div>
+      <div><AuthorsTable /></div>
+      <div className='mt-5'><ProjectsTable /></div>
     </div>
   )
 }
