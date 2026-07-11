@@ -1,36 +1,222 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Material Dashboard - Admin Panel
 
-## Getting Started
+A modern and fully responsive **Admin Dashboard** built with **Next.js**, **TypeScript**, **Material UI**, **Tailwind CSS**, and **shadcn/ui**.
 
-First, run the development server:
+The project recreates a professional dashboard UI inspired by Material Dashboard while following modern React and Next.js best practices.
+
+---
+
+## 📸 Preview
+
+### Dashboard
+
+<p align="center">
+  <img src="./screenshots/dashboard-1.png" width="800" alt="Dashboard Preview">
+</p>
+
+### Profile
+
+<p align="center">
+  <img src="./screenshots/profile.png" width="800" alt="Profile Preview">
+</p>
+
+### Billing
+
+<p align="center">
+  <img src="./screenshots/billing.png" width="800" alt="Billing Preview">
+</p>
+
+### Authentication
+
+<p align="center">
+  <img src="./screenshots/auth.png" width="800" alt="Authentication Preview">
+</p>
+
+---
+
+## 🌐 Live Demo
+
+👉 **Demo:** https://your-demo-link.vercel.app
+
+---
+
+# ✨ Features
+
+- 📱 Fully Responsive Design
+- 🎨 Modern Material UI Interface
+- ⚡ Built with Next.js App Router
+- 🔥 TypeScript Support
+- 🎯 Material UI Components
+- 🎨 Tailwind CSS Styling
+- 🧩 shadcn/ui Components
+- 🎭 Lucide React Icons
+- 📋 Formik Form Management
+- ✅ Yup Validation
+- 🔐 Login & Registration
+- 🌐 MockAPI Integration
+- 📊 Dashboard Page
+- 👤 Profile Page
+- 🔔 Notifications Page
+- 💳 Billing Page
+- 📑 Tables Page
+- 📈 Charts
+- 🎨 Clean Folder Structure
+
+---
+
+# 🛠️ Tech Stack
+
+| Technology | Usage |
+|------------|-------|
+| Next.js 16 | Framework |
+| React 19 | UI Library |
+| TypeScript | Type Safety |
+| Material UI | UI Components |
+| Tailwind CSS | Utility Styling |
+| shadcn/ui | UI Components |
+| Formik | Form Management |
+| Yup | Form Validation |
+| MockAPI | Authentication API |
+| Lucide React | Icons |
+
+---
+
+# 🔐 Authentication
+
+Authentication pages include:
+
+- Sign In
+- Sign Up
+
+Features:
+
+- Form validation using **Formik + Yup**
+- Email validation
+- Password validation
+- Authentication with **MockAPI**
+- Error handling
+- Responsive layout
+
+---
+
+# 📂 Pages
+
+- Dashboard
+- Profile
+- Billing
+- Notifications
+- Tables
+- Sign In
+- Sign Up
+
+---
+
+# 📱 Responsive Design
+
+The entire application is fully responsive.
+
+Optimized for:
+
+- 📱 Mobile
+- 📱 Tablet
+- 💻 Laptop
+- 🖥️ Desktop
+- 🖥️ Large Screens
+
+---
+
+# 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/setarehomadian80/adminPanel.git
+```
+
+Go to project
+
+```bash
+cd adminPanel
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# 📁 Folder Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+ ├── (auth)
+ │    ├── sign-in
+ │    └── sign-up
+ │
+ ├── (dashboard)
+ │    ├── dashboard
+ │    ├── profile
+ │    ├── billing
+ │    ├── notification
+ │    └── tables
+ │
+ ├── component
+ ├── context
+ └── layout.tsx
 
-## Learn More
+public/
+components/
+lib/
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# 🎯 Highlights
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Responsive Material Dashboard
+- Reusable Components
+- Clean Architecture
+- TypeScript
+- Modern UI
+- Authentication Flow
+- MockAPI Integration
+- Form Validation
+- Responsive Navigation
+- Responsive Tables
+- Responsive Cards
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# 📸 Screenshots
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Dashboard | Profile |
+|------------|---------|
+| Replace Image | Replace Image |
+
+| Billing | Tables |
+|----------|--------|
+| Replace Image | Replace Image |
+
+---
+
+# 👨‍💻 Author
+
+**Setare Homadian**
+
+GitHub
+
+https://github.com/setarehomadian80
+
+---
+
+# ⭐ Support
+
+If you like this project, don't forget to ⭐ the repository.
