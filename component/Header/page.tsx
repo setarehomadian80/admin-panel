@@ -1,8 +1,8 @@
 "use client";
 import { User } from "lucide-react";
 import { Bell } from "lucide-react";
-import { RightMenu } from "./icons/rightMenuIcon.tsx/page";
-import { SettingMenu } from "./icons/settingMenuIcon.tsx/page";
+import { SettingMenu } from "./icons/settingMenuIcon/settingMenuIcon";
+import { RightMenu } from "./icons/rightMenuIcon/rightMenuIcon";
 
 export default function Header() {
   return (

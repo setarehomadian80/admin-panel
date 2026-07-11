@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "component/Header/icons/rightMenuIcon", "component/Header/icons/settingMenuIcon"  ],
   "exclude": ["node_modules"]
 }

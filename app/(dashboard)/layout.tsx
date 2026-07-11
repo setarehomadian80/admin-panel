@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 // import "./globals.css";
-import Header from "../component/Header/page";
-import { RightMenuDesktop } from "../component/navbarDesktop/page";
+import Header from "../../component/Header/page";
+import { RightMenuDesktop } from "../../component/navbarDesktop/page";
 import { NavColorProvider } from "../context/NavColorContext";
+import Footer from "@/component/Footer/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -43,6 +44,7 @@ export default function RootLayout({
                 <main className=" flex-1 p-6">
                   {children}
                 </main>
+                <Footer />
               </div>
             </div>
         </NavColorProvider>
