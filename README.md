@@ -23,16 +23,10 @@ The project recreates a professional dashboard UI inspired by Material Dashboard
 ### Menu
 
 <p align="center">
-  <img src="public/image/readMe/scmob.png" width="400" alt="Billing Preview">
+  <img src="public/image/readMe/scmob.png" width="300" alt="Billing Preview">
 </p>
 
-### Authentication
 
-<p align="center">
-  <img src="./screenshots/auth.png" width="800" alt="Authentication Preview">
-</p>
-
----
 
 ## 🌐 Live Demo
 
@@ -121,37 +115,10 @@ Optimized for:
 - 📱 Tablet
 - 💻 Laptop
 - 🖥️ Desktop
-- 🖥️ Large Screens
+
 
 ---
 
-# 📦 Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/setarehomadian80/adminPanel.git
-```
-
-Go to project
-
-```bash
-cd adminPanel
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Run development server
-
-```bash
-npm run dev
-```
-
----
 
 # 📁 Folder Structure
 
@@ -166,7 +133,8 @@ app/
  │    ├── profile
  │    ├── billing
  │    ├── notification
- │    └── tables
+ │    ├── tables
+ │    └── layout
  │
  ├── component
  ├── context
@@ -195,17 +163,6 @@ lib/
 
 ---
 
-# 📸 Screenshots
-
-| Dashboard | Profile |
-|------------|---------|
-| Replace Image | Replace Image |
-
-| Billing | Tables |
-|----------|--------|
-| Replace Image | Replace Image |
-
----
 
 # 👨‍💻 Author
 
