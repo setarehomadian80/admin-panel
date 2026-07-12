@@ -17,7 +17,7 @@ The project recreates a professional dashboard UI inspired by Material Dashboard
 ### Billing
 
 <p align="center">
-  <img src="public/image/readMe/sctab.png" width="100%" alt="Profile Preview">
+  <img src="public/image/readMe/sctab.png" width="768px" alt="Profile Preview">
 </p>
 
 ### Menu
