@@ -30,7 +30,7 @@ export function SettingMenu() {
           <Settings />
         </Button>
       </SheetTrigger>
-      <SheetContent showCloseButton={true} className="p-8">
+      <SheetContent showCloseButton={true} className="p-8 w-65!">
         <SheetHeader className="p-0">
           <SheetTitle>Material UI Configurator</SheetTitle>
           <SheetDescription>See our dashboard options.</SheetDescription>

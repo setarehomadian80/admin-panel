@@ -44,7 +44,7 @@ export default function NotificationsToasts() {
     // حذف خودکار بعد از ۳ ثانیه
     setTimeout(() => {
       setToasts((prev) => prev.filter((t) => t.id !== toast.id));
-    }, 500);
+    }, 1000);
   };
 
   const handleClose = (id: number) => {

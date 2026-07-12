@@ -42,14 +42,13 @@ export function RightMenuDesktop() {
         {/* sidebar container */}
         <div
           className="w-65 h-screen
-                 rounded-2xl
                   px-5 py-4 shadow-lg bg-[#27272a]
                   "
         >
           {/* header */}
           <div
             className={`border-b border-gray-500 pb-3
-                     mb-4 text-lg font-bold  text-white
+                     mb-4 text-lg font-bold text-white
                      `}
           >
             Material Dashboard
@@ -57,6 +56,7 @@ export function RightMenuDesktop() {
 
           {/* menu */}
           <div className="flex flex-col gap-2">
+            
             {menu.map((item) => {
               const Icon = item.icon;
 
@@ -69,7 +69,6 @@ export function RightMenuDesktop() {
                   href={item.link}
                 >
                   <Button
-                    key={item.title}
                     onClick={() => setActive(item.title)}
                     className={`
                                         flex items-center gap-2 justify-start cursor-pointer

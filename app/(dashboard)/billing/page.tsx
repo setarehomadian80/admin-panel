@@ -1,6 +1,5 @@
 import { LucideIcon, Pencil, Wallet, Wifi } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 import InvoicesCard from "./invoices";
 import BillingInformation from "./billingInformation";
 import TransactionsCard from "./yourTransaction";
@@ -162,6 +161,7 @@ export default function page() {
         <div className="md:col-span-7">
           <BillingInformation />
         </div>
+        {/* Your Transaction's */}
         <div className="md:col-span-5"> 
           <TransactionsCard />
         </div>

@@ -2,7 +2,7 @@
 import { User } from "lucide-react";
 import { Bell } from "lucide-react";
 import { SettingMenu } from "./icons/settingMenuIcon/settingMenuIcon";
-import { RightMenu } from "./icons/rightMenuIcon/rightMenuIcon";
+import { MenuIcon } from "./icons/MenuIcon/menuIcon";
 
 export default function Header() {
   return (
@@ -27,7 +27,7 @@ export default function Header() {
         >
           <User size={18} />
           <div className="xl:hidden">
-            <RightMenu />
+            <MenuIcon />
           </div>
           <SettingMenu />
           <Bell size={18} />

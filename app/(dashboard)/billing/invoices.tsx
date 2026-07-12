@@ -1,3 +1,4 @@
+"use client"
 import {
   Card,
   CardContent,
@@ -51,7 +52,8 @@ export default function InvoicesCard() {
       <Card
         sx={{
           borderRadius: 3,
-          boxShadow: 3,
+          boxShadow: 'none',
+          
           p: 2,
           height: "100%",
         }}

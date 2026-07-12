@@ -1,4 +1,6 @@
-import { Box, Card, Divider, Switch, Typography } from "@mui/material";
+"use client"
+
+import { Box, Card, Switch, Typography } from "@mui/material";
 
 type SettingItemProps = {
   label: string;

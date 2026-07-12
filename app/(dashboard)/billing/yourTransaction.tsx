@@ -1,3 +1,5 @@
+"use client"
+
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 
@@ -107,6 +109,7 @@ const TransactionItem = ({ item }: { item: Transaction }) => (
 
     <Typography
       sx={{
+        fontSize: 14 ,
         fontWeight: 600,
         color: item.amount.startsWith("+") ? "success.main" : "error.main",
       }}
@@ -121,10 +124,11 @@ export default function TransactionsCard() {
     <Card
       sx={{
         borderRadius: 3,
-        boxShadow: 3,
+        border:'none',
+        boxShadow:"none"
       }}
     >
-      <CardContent>
+      <CardContent sx={{border:"none"}}>
         <Typography variant="h6" sx={{ fontWeight: 700 }}>
           Your Transaction's
         </Typography>

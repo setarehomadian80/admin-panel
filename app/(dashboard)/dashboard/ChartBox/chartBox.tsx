@@ -87,7 +87,7 @@ export default function MultiActionAreaCard() {
                 />
 
                 <YAxis
-                  width={20}
+                  width={25}
                   tick={{ fill: "#fff" }}
                   axisLine={false}
                   tickLine={false}
@@ -168,7 +168,7 @@ export default function MultiActionAreaCard() {
                 />
 
                 <YAxis
-                  width={20}
+                  width={25}
                   tick={{ fill: "#fff", fontSize: 12 }}
                   axisLine={false}
                   tickLine={false}
@@ -260,7 +260,7 @@ export default function MultiActionAreaCard() {
                 />
 
                 <YAxis
-                  width={20}
+                  width={25}
                   tick={{ fill: "#fff", fontSize: 12 }}
                   axisLine={false}
                   tickLine={false}
