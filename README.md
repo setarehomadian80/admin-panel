@@ -11,19 +11,19 @@ The project recreates a professional dashboard UI inspired by Material Dashboard
 ### Dashboard
 
 <p align="center">
-  <img src="public/image/readMe/scdes.png" width="800" alt="Dashboard Preview">
+  <img src="public/image/readMe/scdes.png" width="100%" alt="Dashboard Preview">
 </p>
 
 ### Billing
 
 <p align="center">
-  <img src="public/image/readMe/sctab.png" width="800" alt="Profile Preview">
+  <img src="public/image/readMe/sctab.png" width="100%" alt="Profile Preview">
 </p>
 
 ### Menu
 
 <p align="center">
-  <img src="public/image/readMe/scmob.png" width="300" alt="Billing Preview">
+  <img src="public/image/readMe/scmob.png" width="30%" alt="Billing Preview">
 </p>
 
 
