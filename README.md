@@ -11,7 +11,7 @@ The project recreates a professional dashboard UI inspired by Material Dashboard
 ### Dashboard
 
 <p align="center">
-  <img src="./screenshots/dashboard-1.png" width="800" alt="Dashboard Preview">
+  <img src="public/image/readMe/scdes.png" width="800" alt="Dashboard Preview">
 </p>
 
 ### Profile
