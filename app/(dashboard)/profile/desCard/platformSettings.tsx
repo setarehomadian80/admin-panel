@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
 import { Box, Card, Switch, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 type SettingItemProps = {
   label: string;
@@ -34,14 +35,18 @@ function SettingItem({ label, defaultChecked = false }: SettingItemProps) {
 }
 
 export default function PlatformSettings() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+  const isLight = theme.palette.mode === "light";
+
   return (
     <Card
       sx={{
         p: 3,
         height: "100%",
         border: "none",
-        boxShadow:'none',
-        borderRadius: "none"
+        boxShadow: "none",
+        borderRadius: "none",
       }}
     >
       <Typography
@@ -49,7 +54,6 @@ export default function PlatformSettings() {
         sx={{
           fontWeight: 700,
           mb: 3,
-          color: "#344767",
         }}
       >
         Platform Settings
@@ -59,7 +63,6 @@ export default function PlatformSettings() {
         variant="caption"
         sx={{
           fontWeight: 700,
-          color: "#8392ab",
           display: "block",
           mb: 2,
           letterSpacing: ".5px",
@@ -72,13 +75,12 @@ export default function PlatformSettings() {
       <SettingItem label="Email me when someone answers me" />
       <SettingItem label="Email me when someone mentions me" defaultChecked />
 
-      <Box  sx={{ my: 4 }} />
+      <Box sx={{ my: 4 }} />
 
       <Typography
         variant="caption"
         sx={{
           fontWeight: 700,
-          color: "#8392ab",
           display: "block",
           mb: 2,
           letterSpacing: ".5px",

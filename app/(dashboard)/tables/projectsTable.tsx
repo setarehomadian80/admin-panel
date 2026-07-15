@@ -47,9 +47,15 @@ const rows = [
 
 export default function ProjectsTable() {
   return (
-    <div className="relative rounded-xl">
+    <div className="relative rounded-xl bg-[#f0f2f5] dark:bg-[#1a2035]">
       {/* HEADER FLOATING (بیرون از scroll) */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[95%] bg-[#1e88e5] text-white px-6 py-4 rounded-xl shadow-lg z-20">
+      <div
+        className="absolute top-4
+       left-1/2 -translate-x-1/2
+        w-[95%] bg-[#1e88e5] text-white
+         px-6 py-4 rounded-[12px]
+          shadow-lg z-20"
+      >
         <h2 className="text-lg font-semibold">Projects Table</h2>
       </div>
 
@@ -101,7 +107,9 @@ export default function ProjectsTable() {
                 <TableRow
                   key={index}
                   sx={{
-                    "&:hover": { backgroundColor: "#f9fafb" },
+                    "&:last-child td, &:last-child th": {
+                      borderBottom: "none",
+                    },
                   }}
                 >
                   {/* name */}
@@ -121,7 +129,7 @@ export default function ProjectsTable() {
                   <TableCell>
                     <Box sx={{ fontWeight: 600 }}>{row.budget}</Box>
                   </TableCell>
-                  
+
                   {/* status */}
                   <TableCell
                     align="center"
@@ -170,12 +178,7 @@ export default function ProjectsTable() {
                         alignItems: "center",
                         justifyContent: "center",
                         borderRadius: "50%",
-                        color: "#6b7280",
                         margin: "0 auto",
-                        "&:hover": {
-                          backgroundColor: "#f3f4f6",
-                          color: "#111827",
-                        },
                       }}
                     >
                       <EllipsisVertical size={18} />

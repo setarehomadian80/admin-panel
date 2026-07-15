@@ -30,7 +30,7 @@ export default function page() {
           >
             {/* black card */}
             <div
-              className="bg-[#2c2c2f] p-5 rounded-xl flex
+              className="bg-[#2c2c2f] p-5 rounded-[14px] flex
              flex-col justify-between gap-10
               col-span-1 xl:col-span-2 text-white relative
                "
@@ -74,7 +74,7 @@ export default function page() {
                 return (
                   <div
                     key={index}
-                    className="bg-white rounded-xl p-5 flex flex-col
+                    className="bg-white dark:bg-[#202940] rounded-[14px] p-5 flex flex-col
                      items-center justify-center gap-4
                       text-center col-span-1"
                   >
@@ -98,13 +98,13 @@ export default function page() {
           {/* Payment Method */}
           <div>
             <div
-              className="bg-white rounded-lg h-full
+              className="bg-white dark:bg-[#202940] rounded-[14px] h-full
             p-5 col-span-1 md:col-span-2 lg:grid-cols-4 "
             >
               {/* top box */}
               <div className="flex justify-between items-center">
                 <h2>Payment Method</h2>
-                <button className="bg-[#212122] text-white text-[14px] p-2 rounded-lg">
+                <button className="bg-[#1a2035] text-white text-[14px] p-2 rounded-lg">
                   +Add New Card
                 </button>
               </div>

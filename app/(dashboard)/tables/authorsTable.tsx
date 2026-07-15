@@ -9,6 +9,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Chip from "@mui/material/Chip";
+import { useTheme } from "@mui/material/styles";
 
 function createData(
   logo: string,
@@ -73,10 +74,19 @@ const rows = [
 ];
 
 export default function AuthorsTable() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+
   return (
-    <div className="relative rounded-xl">
+    <div className="relative rounded-[15px] bg-[#f0f2f5] dark:bg-[#1a2035]">
       {/* HEADER FLOATING (بیرون از scroll) */}
-      <div className="absolute top-4 left-1/2 -translate-x-1/2 w-[95%] bg-[#1e88e5] text-white px-6 py-4 rounded-xl shadow-lg z-20">
+      <div
+        className="absolute top-4
+       left-1/2 -translate-x-1/2
+       w-[95%] bg-[#1e88e5]
+        text-white px-6 py-4
+         rounded-[12px] shadow-lg z-20"
+      >
         <h2 className="text-lg font-semibold">Authors Table</h2>
       </div>
 
@@ -87,40 +97,57 @@ export default function AuthorsTable() {
           sx={{
             borderRadius: 4,
             paddingTop: 6,
-            // boxShadow: 6,
             mt: 6, // برای جا دادن header
+            bgcolor: isDark ? "#202940" : "#ffffff",
+            color: isDark ? "#ffffff" : "#344767",
+            boxShadow: isDark
+              ? "0 10px 30px rgba(0,0,0,.35)"
+              : "0 10px 30px rgba(0,0,0,.08)",
           }}
         >
-          <Table sx={{ minWidth: 650 }}>
+          <Table
+            sx={{
+              minWidth: 650,
+              bgcolor: "transparent",
+              "& .MuiTableCell-root": {
+                color: isDark ? "#ffffff" : "#344767",
+              },
+            }}
+          >
             {/* HEADER */}
-            <TableHead>
-              <TableRow>
-                <TableCell sx={{ fontWeight: 600, color: "#6b7280" }}>
-                  Author
-                </TableCell>
-                <TableCell sx={{ fontWeight: 600, color: "#6b7280" }}>
-                  Function
-                </TableCell>
-                
+            <TableHead
+              sx={{
+                "& .MuiTableCell-root": {
+                  color: isDark ? "#f8f9fa" : "#7b809a",
+                  fontWeight: 700,
+                  borderBottom: isDark
+                    ? "1px solid rgba(255,255,255,.08)"
+                    : "1px solid #e9ecef",
+                },
+              }}
+            >
+              <TableRow
+                sx={{
+                  "& td": {
+                    borderBottom: isDark
+                      ? "1px solid rgba(255,255,255,.08)"
+                      : "1px solid #eceff3",
+                  },
+                }}
+              >
+                <TableCell sx={{ fontWeight: 600 }}>Author</TableCell>
+                <TableCell sx={{ fontWeight: 600 }}>Function</TableCell>
+
                 {/* Status */}
-                <TableCell
-                  align="center"
-                  sx={{ fontWeight: 600, color: "#6b7280" }}
-                >
+                <TableCell align="center" sx={{ fontWeight: 600 }}>
                   Status
                 </TableCell>
 
                 {/* Employed */}
-                <TableCell
-                  align='left'
-                  sx={{ fontWeight: 600, color: "#6b7280" }}
-                >
+                <TableCell align="left" sx={{ fontWeight: 600 }}>
                   Employed
                 </TableCell>
-                <TableCell
-                  align="center"
-                  sx={{ fontWeight: 600, color: "#6b7280" }}
-                >
+                <TableCell align="center" sx={{ fontWeight: 600 }}>
                   Action
                 </TableCell>
               </TableRow>
@@ -132,7 +159,9 @@ export default function AuthorsTable() {
                 <TableRow
                   key={index}
                   sx={{
-                    "&:hover": { backgroundColor: "#f9fafb" },
+                    "&:last-child td, &:last-child th": {
+                      borderBottom: "none",
+                    },
                   }}
                 >
                   <TableCell>
@@ -145,8 +174,18 @@ export default function AuthorsTable() {
                       />
                       {/* name */}
                       <Box>
-                        <Box sx={{ fontWeight: 600 }}>{row.name[0]}</Box>
-                        <Box sx={{ fontSize: 13, color: "gray" }}>
+                        <Box
+                          sx={{
+                            fontWeight: 600,
+                          }}
+                        >
+                          {row.name[0]}
+                        </Box>
+                        <Box
+                          sx={{
+                            fontSize: 13,
+                          }}
+                        >
                           {row.name[1]}
                         </Box>
                       </Box>
@@ -155,9 +194,7 @@ export default function AuthorsTable() {
 
                   <TableCell>
                     <Box sx={{ fontWeight: 600 }}>{row.myfunction[0]}</Box>
-                    <Box sx={{ fontSize: 13, color: "gray" }}>
-                      {row.myfunction[1]}
-                    </Box>
+                    <Box sx={{ fontSize: 13 }}>{row.myfunction[1]}</Box>
                   </TableCell>
 
                   <TableCell align="center">
@@ -181,8 +218,6 @@ export default function AuthorsTable() {
                       sx={{
                         cursor: "pointer",
                         fontWeight: 600,
-                        color: "#6b7280",
-                        "&:hover": { color: "#111827" },
                       }}
                     >
                       {row.action}

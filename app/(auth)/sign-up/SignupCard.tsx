@@ -16,6 +16,7 @@ import {
 import FacebookRoundedIcon from "@mui/icons-material/FacebookRounded";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
+import { useTheme } from "@mui/material/styles";
 
 import { Formik, Form } from "formik";
 import * as Yup from "yup";
@@ -34,6 +35,8 @@ const validationSchema = Yup.object({
 });
 
 export default function SignupCard() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const router = useRouter();
 
   const [message, setMessage] = useState("");
@@ -75,7 +78,6 @@ export default function SignupCard() {
             borderRadius: 3,
             background: "#3c95ef",
             py: 3,
-            boxShadow: "0 10px 25px #3c95ef",
           }}
         >
           <Typography
@@ -147,6 +149,19 @@ export default function SignupCard() {
                   onBlur={handleBlur}
                   error={touched.name && Boolean(errors.name)}
                   helperText={touched.name && errors.name}
+                  sx={{
+                    "& .MuiInputLabel-root": {
+                      color: isDark ? "#a8b2d1" : "#67748e",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      color: isDark ? "#fff" : "#344767",
+                      "& fieldset": {
+                        borderColor: isDark
+                          ? "rgba(255,255,255,.2)"
+                          : "#d2d6da",
+                      },
+                    },
+                  }}
                 />
 
                 <TextField
@@ -159,6 +174,19 @@ export default function SignupCard() {
                   onBlur={handleBlur}
                   error={touched.email && Boolean(errors.email)}
                   helperText={touched.email && errors.email}
+                  sx={{
+                    "& .MuiInputLabel-root": {
+                      color: isDark ? "#a8b2d1" : "#67748e",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      color: isDark ? "#fff" : "#344767",
+                      "& fieldset": {
+                        borderColor: isDark
+                          ? "rgba(255,255,255,.2)"
+                          : "#d2d6da",
+                      },
+                    },
+                  }}
                 />
 
                 <TextField
@@ -172,6 +200,19 @@ export default function SignupCard() {
                   onBlur={handleBlur}
                   error={touched.password && Boolean(errors.password)}
                   helperText={touched.password && errors.password}
+                  sx={{
+                    "& .MuiInputLabel-root": {
+                      color: isDark ? "#a8b2d1" : "#67748e",
+                    },
+                    "& .MuiOutlinedInput-root": {
+                      color: isDark ? "#fff" : "#344767",
+                      "& fieldset": {
+                        borderColor: isDark
+                          ? "rgba(255,255,255,.2)"
+                          : "#d2d6da",
+                      },
+                    },
+                  }}
                 />
 
                 <FormControlLabel
@@ -201,7 +242,6 @@ export default function SignupCard() {
                     py: 1.4,
                     borderRadius: 2,
                     background: "#3c95ef",
-                    boxShadow: "0 8px 20px #3c95ef",
                   }}
                 >
                   SIGN UP

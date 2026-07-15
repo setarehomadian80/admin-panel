@@ -112,8 +112,6 @@ export default function MultiActionAreaCard() {
             </Typography>
 
             <Typography
-              color="text.secondary"
-              className="text-gray-600"
               style={{ fontSize: "14px" }}
             >
               Last Campaign Performance
@@ -121,7 +119,7 @@ export default function MultiActionAreaCard() {
           </CardContent>
         </CardActionArea>
 
-        <CardActions className="p-4! text-gray-600">
+        <CardActions className="p-4! ">
           <Clock size={20} />
           <Typography variant="body2" color="text.secondary">
             Campaign sent 2 days ago
@@ -207,15 +205,15 @@ export default function MultiActionAreaCard() {
               Daily Sales
             </Typography>
 
-            <Typography color="text.secondary" style={{ fontSize: "14px" }}>
+            <Typography  style={{ fontSize: "14px" }}>
               (+15%) increase in today sales.
             </Typography>
           </CardContent>
         </CardActionArea>
 
-        <CardActions className="p-4! text-gray-600">
+        <CardActions className="p-4!">
           <Clock size={20} />
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" >
             (+15%) increase in today sales.
           </Typography>
         </CardActions>
@@ -305,7 +303,7 @@ export default function MultiActionAreaCard() {
           </CardContent>
         </CardActionArea>
 
-        <CardActions className="p-4! text-gray-600">
+        <CardActions className="p-4!">
           <Clock size={20} />
           <Typography variant="body2" color="text.secondary">
             just updated

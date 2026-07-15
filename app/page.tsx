@@ -7,7 +7,7 @@ type Props = {
 
 export default function Home({ navColor }: Props) {
  
-  redirect("/dashboard")
+  redirect("/sign-in")
   
 
 }

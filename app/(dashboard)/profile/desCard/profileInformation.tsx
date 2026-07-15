@@ -37,13 +37,20 @@ export default function ProfileInformation() {
           variant="h6"
           sx={{
             fontWeight: 700,
-            color: "#344767",
           }}
         >
           Profile Information
         </Typography>
 
-        <IconButton size="small">
+        <IconButton
+          size="small"
+          sx={{
+            color: "#7b809a",
+            ".dark &": {
+              color: "#8392ab",
+            },
+          }}
+        >
           <EditIcon fontSize="small" />
         </IconButton>
       </Box>
@@ -51,7 +58,6 @@ export default function ProfileInformation() {
       <Typography
         variant="body2"
         sx={{
-          color: "#67748e",
           lineHeight: 1.8,
           mb: 3,
         }}
@@ -61,7 +67,7 @@ export default function ProfileInformation() {
         term because pain avoids larger pain in the future.
       </Typography>
 
-      <Box  sx={{ mb: 4 }} />
+      <Box sx={{ mb: 4 }} />
 
       <Stack spacing={2}>
         <Box sx={{ display: "flex" }}>
@@ -70,16 +76,13 @@ export default function ProfileInformation() {
             sx={{
               fontWeight: 700,
               width: 120,
-              color: "#344767",
               fontSize: 14,
             }}
           >
             Full Name:
           </Typography>
 
-          <Typography sx={{ color: "#67748e", fontSize: 14 }}>
-            Alec Thompson
-          </Typography>
+          <Typography sx={{ fontSize: 14 }}>Alec Thompson</Typography>
         </Box>
 
         <Box sx={{ display: "flex" }}>
@@ -87,16 +90,13 @@ export default function ProfileInformation() {
             sx={{
               fontWeight: 700,
               width: 120,
-              color: "#344767",
               fontSize: 14,
             }}
           >
             Mobile:
           </Typography>
 
-          <Typography sx={{ color: "#67748e", fontSize: 14 }}>
-            (+44) 123 1234 123
-          </Typography>
+          <Typography sx={{ fontSize: 14 }}>(+44) 123 1234 123</Typography>
         </Box>
 
         <Box sx={{ display: "flex" }}>
@@ -104,16 +104,13 @@ export default function ProfileInformation() {
             sx={{
               fontWeight: 700,
               width: 120,
-              color: "#344767",
               fontSize: 14,
             }}
           >
             Email:
           </Typography>
 
-          <Typography sx={{ color: "#67748e", fontSize: 14 }}>
-            alec@mail.com
-          </Typography>
+          <Typography sx={{ fontSize: 14 }}>alec@mail.com</Typography>
         </Box>
 
         <Box sx={{ display: "flex" }}>
@@ -121,14 +118,13 @@ export default function ProfileInformation() {
             sx={{
               fontWeight: 700,
               width: 120,
-              color: "#344767",
               fontSize: 14,
             }}
           >
             Location:
           </Typography>
 
-          <Typography sx={{ color: "#67748e", fontSize: 14 }}>USA</Typography>
+          <Typography sx={{ fontSize: 14 }}>USA</Typography>
         </Box>
 
         <Box
@@ -141,7 +137,6 @@ export default function ProfileInformation() {
             sx={{
               fontWeight: 700,
               width: 120,
-              color: "#344767",
               fontSize: 14,
             }}
           >

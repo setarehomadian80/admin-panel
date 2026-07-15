@@ -1,12 +1,12 @@
 "use client";
 import { User } from "lucide-react";
 import { Bell } from "lucide-react";
-import { SettingMenu } from "./icons/settingMenuIcon/settingMenuIcon";
-import { MenuIcon } from "./icons/MenuIcon/menuIcon";
+import { SettingMenu } from "./navbars/settingMenu/settingMenu";
+import MenuIcon from "./navbars/navbarMobile/navbarMobile";
 
 export default function Header() {
   return (
-    <main className="sticky top-0 self-start z-50 bg-[#f0f2f5]">
+    <main className="sticky top-0 self-start z-50 bg-[#f0f2f5] dark:bg-[#1a2035]">
       {/* 2 box */}
       <div className="w-full flex justify-between xl:justify-end p-3">
         {/* search box */}

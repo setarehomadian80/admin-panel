@@ -5,10 +5,14 @@ import { Box, Grid, Typography } from "@mui/material";
 import AppsIcon from "@mui/icons-material/Apps";
 import EmailIcon from "@mui/icons-material/Email";
 import SettingsIcon from "@mui/icons-material/Settings";
+import { useTheme } from "@mui/material/styles";
 
 export default function ProfileMenu() {
+  
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+  
   const [active, setActive] = useState(0);
-
   const menus = [
     {
       title: "APP",
@@ -28,10 +32,10 @@ export default function ProfileMenu() {
     <Box
       sx={{
         width: "100%",
-        bgcolor: "#f8f9fa",
         borderRadius: 3,
         p: 0.5,
         border: "none",
+        bgcolor: isDark ? "#202940" : "#f8f9fa",
       }}
     >
       <Grid container spacing={1}>
@@ -50,14 +54,13 @@ export default function ProfileMenu() {
                 cursor: "pointer",
                 transition: ".3s",
 
-                bgcolor: active === index ? "#fff" : "transparent",
+                bgcolor: active === index ? "#1a2035" : "transparent",
 
                 boxShadow:
                   active === index ? "0 4px 12px rgba(0,0,0,.08)" : "none",
 
-                "&:hover": {
-                  bgcolor: active === index ? "#fff" : "#eceff3",
-                },
+                color:
+                  active === index ? "#ffffff" : isDark ? "#ffffff" : "#344767",
               }}
             >
               {item.icon}
@@ -66,7 +69,6 @@ export default function ProfileMenu() {
                 sx={{
                   fontSize: 12,
                   fontWeight: 700,
-                  color: "#344767",
                 }}
               >
                 {item.title}

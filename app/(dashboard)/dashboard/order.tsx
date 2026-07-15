@@ -36,8 +36,10 @@ const data = [
 export default function Order() {
   return (
     <div
-      className="bg-white rounded-xl
-         p-5 shadow-[4px_4px_4px_rgba(0,0,0,0.25)]"
+      className=" rounded-[14px]
+         p-5 shadow-[4px_4px_4px_rgba(0,0,0,0.25)]
+         bg-white dark:bg-[#202940]
+         "
     >
       <div>
         <h1 className="text-xl font-bold">Orders overview</h1>
@@ -62,11 +64,11 @@ export default function Order() {
 
               {/* text */}
               <div className="flex flex-col *:my-1">
-                <h2 className="text-gray-800 text-[16px] font-bold">
+                <h2 className="text-[16px] font-bold">
                   {item.text}
                 </h2>
 
-                <span className="text-xs text-gray-400">{item.span}</span>
+                <span className="text-xs">{item.span}</span>
               </div>
             </div>
           );

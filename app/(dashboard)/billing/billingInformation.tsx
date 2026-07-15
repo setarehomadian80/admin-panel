@@ -1,3 +1,5 @@
+"use client";
+
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutlined";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import {
@@ -8,6 +10,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 type BillingItem = {
   id: number;
@@ -42,8 +45,11 @@ const billingData: BillingItem[] = [
 ];
 
 export default function BillingInformation() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
+
   return (
-    <div className="bg-white rounded-lg p-5">
+    <div className="bg-white dark:bg-[#202940] rounded-[14px] p-5">
       <Box>
         <Typography variant="h6" sx={{ marginBottom: 2, fontWeight: 700 }}>
           Billing Information
@@ -56,11 +62,9 @@ export default function BillingInformation() {
               elevation={0}
               sx={{
                 borderRadius: 3,
-                bgcolor: "#fff",
-                border: "1px solid #ececec",
               }}
             >
-              <CardContent sx={{ backgroundColor: "#f8f9fa" }}>
+              <CardContent className="bg-[#eff1f4] dark:bg-[#202940]!">
                 <Box
                   sx={{
                     display: "flex",
@@ -70,9 +74,11 @@ export default function BillingInformation() {
                     gap: 2,
                   }}
                 >
-                  <Box sx={{width:'100%'}}>
-                    <div className="flex justify-between
-                     w-full! items-center! my-2 h-10">
+                  <Box sx={{ width: "100%" }}>
+                    <div
+                      className="flex justify-between
+                     w-full! items-center! my-2 h-10"
+                    >
                       <Typography
                         variant="subtitle1"
                         sx={{ fontWeight: 700 }}
@@ -100,15 +106,11 @@ export default function BillingInformation() {
                       Company Name: <strong>{item.company}</strong>
                     </Typography>
 
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      sx={{ marginBottom: 0.5 }}
-                    >
+                    <Typography variant="body2" sx={{ marginBottom: 0.5 }}>
                       Email Address: <strong>{item.email}</strong>
                     </Typography>
 
-                    <Typography variant="body2" color="text.secondary">
+                    <Typography variant="body2">
                       VAT Number: <strong>{item.vat}</strong>
                     </Typography>
                   </Box>

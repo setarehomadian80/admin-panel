@@ -26,6 +26,7 @@ export default function ProfileCard() {
           fill
           style={{
             objectFit: "cover",
+            borderRadius: 16
           }}
         />
       </div>

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Card,
   CardContent,
@@ -52,10 +52,11 @@ export default function InvoicesCard() {
       <Card
         sx={{
           borderRadius: 3,
-          boxShadow: 'none',
-          
+          boxShadow: "none",
           p: 2,
           height: "100%",
+          backgroundColor: "var(--card)",
+          color: "var(--card-foreground)",
         }}
       >
         {/* Header */}
@@ -82,7 +83,7 @@ export default function InvoicesCard() {
 
         {/* List */}
         <List>
-          {invoices.map((inv , index ) => (
+          {invoices.map((inv, index) => (
             <ListItem
               key={`${inv.id}-${index}`}
               secondaryAction={
@@ -102,7 +103,23 @@ export default function InvoicesCard() {
                 </Stack>
               }
             >
-              <ListItemText primary={inv.date} secondary={inv.id} />
+              <ListItemText
+                primary={inv.date}
+                secondary={inv.id}
+                slotProps={{
+                  primary: {
+                    sx: {
+                      color: "var(--foreground)",
+                      fontWeight: 600,
+                    },
+                  },
+                  secondary: {
+                    sx: {
+                      color: "var(--muted-foreground)",
+                    },
+                  },
+                }}
+              />
             </ListItem>
           ))}
         </List>

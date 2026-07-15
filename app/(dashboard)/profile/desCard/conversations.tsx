@@ -58,7 +58,6 @@ export default function Conversations() {
         sx={{
           mb: 3,
           fontWeight: 700,
-          color: "#344767",
         }}
       >
         Conversations
@@ -95,7 +94,6 @@ export default function Conversations() {
                   sx={{
                     fontWeight: 600,
                     fontSize: 15,
-                    color: "#344767",
                   }}
                 >
                   {item.name}
@@ -104,7 +102,6 @@ export default function Conversations() {
                 <Typography
                   variant="body2"
                   sx={{
-                    color: "#67748e",
                     fontSize: 13,
                   }}
                 >

@@ -10,6 +10,7 @@ import {
 import { Settings } from "lucide-react";
 import { useNavColor } from "@/app/context/NavColorContext";
 import SwitchSizes from "./Switch";
+import ThemeToggle  from "@/component/themeToggle";
 
 const colors = [
   "#E32F6E",
@@ -26,7 +27,7 @@ export function SettingMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="border-none bg-[#f0f2f5]">
+        <Button variant="outline" className="border-none ">
           <Settings />
         </Button>
       </SheetTrigger>

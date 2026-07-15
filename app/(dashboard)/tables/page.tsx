@@ -1,6 +1,6 @@
 import React from 'react'
-import AuthorsTable from './AuthorsTable/page'
-import ProjectsTable from './ProjectsTable/page'
+import AuthorsTable from './authorsTable'
+import ProjectsTable from './projectsTable'
 
 export default function page() {
   return (

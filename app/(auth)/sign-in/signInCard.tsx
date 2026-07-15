@@ -22,7 +22,7 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
-
+import { useTheme } from "@mui/material/styles";
 const validationSchema = Yup.object({
   email: Yup.string().email("Invalid email").required("Email is required"),
 
@@ -30,6 +30,8 @@ const validationSchema = Yup.object({
 });
 
 export default function SignInCard() {
+  const theme = useTheme();
+  const isDark = theme.palette.mode === "dark";
   const router = useRouter();
 
   const [error, setError] = useState("");
@@ -44,7 +46,8 @@ export default function SignInCard() {
         overflow: "visible",
         p: 4,
         pt: 8,
-        bgcolor: "#fff",
+        bgcolor: "var(--card)",
+        color: "var(--card-foreground)",
         boxShadow: "0 20px 45px rgba(0,0,0,.12)",
         position: "relative",
       }}
@@ -58,7 +61,6 @@ export default function SignInCard() {
           borderRadius: 3,
           py: 3,
           background: "#3a94ee",
-          boxShadow: "0 8px 25px #3a94ee",
         }}
       >
         <Typography
@@ -112,6 +114,7 @@ export default function SignInCard() {
             );
 
             if (user) {
+              document.cookie = "token=logged-in; path=/";
               router.push("/dashboard");
             } else {
               setError("Email or password is incorrect");
@@ -135,6 +138,17 @@ export default function SignInCard() {
                 onBlur={handleBlur}
                 error={touched.email && Boolean(errors.email)}
                 helperText={touched.email && errors.email}
+                sx={{
+                  "& .MuiInputLabel-root": {
+                    color: isDark ? "#a8b2d1" : "#67748e",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    color: isDark ? "#fff" : "#344767",
+                    "& fieldset": {
+                      borderColor: isDark ? "rgba(255,255,255,.2)" : "#d2d6da",
+                    },
+                  },
+                }}
               />
 
               <TextField
@@ -148,6 +162,17 @@ export default function SignInCard() {
                 onBlur={handleBlur}
                 error={touched.password && Boolean(errors.password)}
                 helperText={touched.password && errors.password}
+                sx={{
+                  "& .MuiInputLabel-root": {
+                    color: isDark ? "#a8b2d1" : "#67748e",
+                  },
+                  "& .MuiOutlinedInput-root": {
+                    color: isDark ? "#fff" : "#344767",
+                    "& fieldset": {
+                      borderColor: isDark ? "rgba(255,255,255,.2)" : "#d2d6da",
+                    },
+                  },
+                }}
               />
 
               <Stack direction="row" spacing={1} sx={{ alignItems: "center" }}>
@@ -165,7 +190,6 @@ export default function SignInCard() {
                   borderRadius: 2,
                   fontWeight: 700,
                   background: "#3a94ee",
-                  boxShadow: "0 8px 20px #3a94ee",
                 }}
               >
                 Sign In

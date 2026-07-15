@@ -9,12 +9,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import BasicTable from './Table/table';
-import Order from './Orders overview/order';
+import BasicTable from './table';
+import Order from './order';
 
 export default function ProjectBox() {
   return (
-    <div className='w-full bg-white rounded-xl'>
+    <div className='w-full rounded-[14px]
+     bg-white dark:bg-[#202940]
+     shadow-[4px_4px_4px_rgba(0,0,0,0.25)]
+     '>
       {/* header */}
       <div className='flex justify-between items-center p-5'>
         {/* text */}

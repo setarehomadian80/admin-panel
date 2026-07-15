@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Roboto } from "next/font/google";
-
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
+import { ThemeProvider } from "@/component/theme-provider";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -9,15 +10,18 @@ const roboto = Roboto({
   variable: "--font-roboto",
 });
 
-
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={roboto.variable}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className={roboto.variable}>
+        <AppRouterCacheProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }

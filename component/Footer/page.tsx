@@ -28,7 +28,6 @@ export default function Footer() {
           justifyContent: { xs: "center", md: "flex-start" },
           flexWrap: "wrap",
           gap: 0.5,
-          color: "text.secondary",
           fontSize: "0.875rem",
           textAlign: { xs: "center", md: "left" },
         }}
@@ -43,13 +42,12 @@ export default function Footer() {
         by
         <Link
           component={NextLink}
-          href="https://www.creative-tim.com"
+          href="https://github.com/setarehomadian80"
           target="_blank"
           underline="none"
           sx={{
             ml: 0.5,
             fontWeight: 600,
-            color: "text.primary",
             transition: "all .2s ease",
 
             "&:hover": {
@@ -57,9 +55,8 @@ export default function Footer() {
             },
           }}
         >
-          Creative Tim
+          Setare
         </Link>
-        for a better web.
       </Typography>
 
       <Box
@@ -71,31 +68,14 @@ export default function Footer() {
           justifyContent: "center",
         }}
       >
-        <Link
-          component={NextLink}
-          href="https://www.creative-tim.com"
-          target="_blank"
-          underline="none"
-          sx={{
-            color: "text.secondary",
-            fontSize: "0.875rem",
-            fontWeight: 500,
-            transition: "all .2s ease",
-            "&:hover": {
-              color: "text.primary",
-            },
-          }}
-        >
-          Creative Tim
-        </Link>
+        
 
         <Link
           component={NextLink}
-          href="https://www.creative-tim.com/presentation"
+          href="https://github.com/setarehomadian80"
           target="_blank"
           underline="none"
           sx={{
-            color: "text.secondary",
             fontSize: "0.875rem",
             fontWeight: 500,
             transition: "all .2s ease",
@@ -109,11 +89,10 @@ export default function Footer() {
 
         <Link
           component={NextLink}
-          href="https://www.creative-tim.com/blog"
+          href="https://github.com/setarehomadian80"
           target="_blank"
           underline="none"
           sx={{
-            color: "text.secondary",
             fontSize: "0.875rem",
             fontWeight: 500,
             transition: "all .2s ease",
@@ -127,11 +106,10 @@ export default function Footer() {
 
         <Link
           component={NextLink}
-          href="https://www.creative-tim.com/license"
+          href="https://github.com/setarehomadian80"
           target="_blank"
           underline="none"
           sx={{
-            color: "text.secondary",
             fontSize: "0.875rem",
             fontWeight: 500,
             transition: "all .2s ease",

@@ -6,14 +6,16 @@ import {
   LayoutDashboard,
   LogIn,
   LucideIcon,
-  Menu,
   ReceiptText,
   TableProperties,
   User,
+  FileText,
+  LogOut,
 } from "lucide-react";
 import { useState } from "react";
 import { useNavColor } from "@/app/context/NavColorContext";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface MenuItem {
   title: string;
@@ -28,21 +30,33 @@ const menu = [
   { title: "Notification", icon: Bell, link: "./notification" },
   { title: "Profile", icon: User, link: "./profile" },
   { title: "Sign In", icon: LogIn, link: "./sign-in" },
-  { title: "Sign Up", icon: LogIn, link: "./sign-up" },
+  { title: "Sign Up", icon: FileText, link: "./sign-up" },
 ];
 
 export function RightMenuDesktop() {
   const { navColor } = useNavColor();
   const [active, setActive] = useState("Dashboard");
+  // logout
+  const router = useRouter();
+
+  // logout
+  const handleLogout = () => {
+    document.cookie = "token=; Max-Age=0; path=/";
+
+    router.push("/sign-in");
+  };
 
   return (
     <>
       {/* Desktop */}
-      <div className="hidden xl:flex sticky top-0 self-start">
+      <div
+        className="hidden xl:flex sticky
+       top-0 self-start bg-[#212123] dark:bg-[#1f283e]"
+      >
         {/* sidebar container */}
         <div
           className="w-65 h-screen
-                  px-5 py-4 shadow-lg bg-[#27272a]
+                  px-5 py-4 shadow-lg 
                   "
         >
           {/* header */}
@@ -56,7 +70,6 @@ export function RightMenuDesktop() {
 
           {/* menu */}
           <div className="flex flex-col gap-2">
-            
             {menu.map((item) => {
               const Icon = item.icon;
 
@@ -69,21 +82,35 @@ export function RightMenuDesktop() {
                   href={item.link}
                 >
                   <Button
-                    onClick={() => setActive(item.title)}
-                    className={`
-                                        flex items-center gap-2 justify-start cursor-pointer
-                                         rounded-[8px] py-5
-                                          transition-all duration-300
-                                         hover:bg-[#3a3a3f]
-                                         `}
-                    style={isActive ? { backgroundColor: navColor } : undefined}
+      onClick={() => setActive(item.title)}
+     className={`
+     flex items-center gap-2 justify-start cursor-pointer
+     rounded-[8px] py-5
+      transition-all duration-300
+      bg-[#212123] dark:bg-[#1f283e] dark:text-white
+     hover:bg-[#90909b]   dark:hover:bg-white/10
+     `}
+      style={isActive ? { backgroundColor: navColor } : undefined}
                   >
-                    <Icon size={18} />
-                    {item.title}
-                  </Button>
-                </Link>
+      <Icon size={18} />
+      {item.title}
+       </Button>
+        </Link>
               );
             })}
+            <Button
+              onClick={handleLogout}
+              className="
+    flex items-center gap-2 justify-start
+    rounded-[8px] py-5
+    transition-all duration-300 bg-[#212123]
+     dark:bg-[#1f283e] dark:text-white
+    hover:bg-[#90909b]  dark:hover:bg-white/10
+  "
+            >
+              <LogOut size={18} />
+              Logout
+            </Button>
           </div>
         </div>
       </div>

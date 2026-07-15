@@ -149,7 +149,7 @@ export default function TransactionsCard() {
           </Stack>
         </Box>
 
-        <Box sx={{ marginTop: 3 }}>
+        <Box sx={{ marginTop: 2 }}>
           <Typography
             variant="caption"
             color="text.secondary"
