@@ -1,8 +1,8 @@
 "use client";
 import { User } from "lucide-react";
 import { Bell } from "lucide-react";
-import { SettingMenu } from "./navbars/settingMenu/settingMenu";
-import MenuIcon from "./navbars/navbarMobile/navbarMobile";
+import { SettingMenu } from "./navbars/settingMenu";
+import MenuIcon from "./navbars/navbarMobile";
 
 export default function Header() {
   return (
