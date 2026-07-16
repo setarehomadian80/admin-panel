@@ -126,7 +126,7 @@ export default function SignupCard() {
                 "https://68c1a77098c818a69402a75f.mockapi.io/users",
                 values,
               );
-
+               document.cookie = "token=true; path=/";
               setMessage("Account created successfully");
 
               resetForm();
