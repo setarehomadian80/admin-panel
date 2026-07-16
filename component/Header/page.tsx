@@ -15,7 +15,7 @@ export default function Header() {
             type="search"
             placeholder="Search here"
             className="border 
-                border-gray-300 rounded-xl
+                border-gray-300 rounded-[5px]!
                 p-2.5 w-42
                 "
           />

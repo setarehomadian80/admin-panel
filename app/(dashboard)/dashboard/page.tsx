@@ -7,16 +7,16 @@ import DataBox from "./dataBox";
 export default function dashboard() {
   return (
     <>
-      <main className="*:mt-16">
+      <main>
         <div>
           <DataBox />
         </div>
         {/* ///////chartbox ////////*/}
-        <div>
+        <div className="mt-16">
           <MultiActionAreaCard />
         </div>
         {/* /////////Projects//////// */}
-        <div className="mt-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full *:w-full">
+        <div className="mt-16 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full *:w-full">
           <div className="lg:col-span-2">
             <ProjectBox />
           </div>

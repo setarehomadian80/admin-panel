@@ -50,11 +50,11 @@ export default function ProjectsTable() {
     <div className="relative rounded-xl bg-[#f0f2f5] dark:bg-[#1a2035]">
       {/* HEADER FLOATING (بیرون از scroll) */}
       <div
-        className="absolute top-4
+       className="absolute top-4
        left-1/2 -translate-x-1/2
-        w-[95%] bg-[#1e88e5] text-white
-         px-6 py-4 rounded-[12px]
-          shadow-lg z-20"
+       w-[95%] bg-[#1e88e5] text-white
+       px-6 py-4 rounded-[12px]
+       shadow-lg z-20"
       >
         <h2 className="text-lg font-semibold">Projects Table</h2>
       </div>
