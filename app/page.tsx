@@ -1,11 +1,7 @@
 import { redirect  } from "next/navigation";
 
 
-type Props = {
-    navColor: string;
-};
-
-export default function Home({ navColor }: Props) {
+export default function Home() {
  
   redirect("/sign-in")
   
